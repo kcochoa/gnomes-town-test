@@ -1,0 +1,120 @@
+.search-area{
+    height: 100%;
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    flex-direction: column; 
+    position: relative;   
+}
+
+.search-box{
+    position: relative;
+    top: -35px;
+}
+
+
+.search-separator{
+    width: 94%;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 8px;
+    background-color: #DEE2E6;
+}
+
+
+.houses{
+    width: 100%;
+    height: 64%;
+    margin: 0 auto;
+    position: absolute;
+    top: -31px;
+}
+
+.form-inline{
+    width: 94% !important;
+    margin: 0 auto;
+    margin-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    input{
+        width: 100% !important;
+        border-radius: 10px;
+        border: 1px solid #032336;
+        padding-top: 10px;
+
+        &::-webkit-input-placeholder{
+            font-family: Montserrat;
+            font-size: 1.1rem !important;
+            color: #748690;
+        }
+    }
+
+    .logo{
+        position: absolute;
+        top: 6px;
+        left: 11px;
+        cursor: auto;      
+    }
+
+}
+
+
+
+/*---Responsive----*/
+
+
+  @media (max-width: 480px) {
+    .houses {
+        width: 100%;
+        height: 58%;
+        top: -18px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .houses {
+        width: 100%;
+        height: 50%;
+        top: -2px;
+    }
+
+    .form-inline{
+        input::-webkit-input-placeholder{
+            font-size: .9rem;
+        }
+    }
+
+  }
+
+  @media (max-width: 316px) {
+    .houses {
+        width: 100%;
+        height: 43%;
+        top: 13px;
+    }
+  }
+
+
+  @media (max-width: 280px) {
+    .houses {
+        width: 100%;
+        height: 38%;
+        top: 24px;
+    }
+
+    .form-inline{
+        input::-webkit-input-placeholder{
+            font-size: .8rem;
+        }
+    }
+  }
+
+
+
+
+
+
+
+
