@@ -3,3 +3,106 @@
 .color {
   color: $primary-orange;
 }
+
+.dropdown-toggle::after{
+  display: none; 
+}
+
+/*HOMEPAGE STYLES*/
+
+.bg-banner{
+  background-image: url('./assets/img/homepage-mobile.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.btn-banner{
+  background-color: #B8671F;
+  border: 1px solid #B8671F;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 450px;
+  border-radius: 50px;
+}
+
+.link-banner, .link-banner:hover{
+  color: $text-white;
+  text-decoration: none;
+
+}
+
+/*LIST HABITANTS PAGE*/
+
+.searchButton{
+  background-color: #B8671F;
+  border: 1px solid #B8671F;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+ 
+}
+
+.inputSearch, .inputSearch:hover, .inputSearch:focus, .inputSearch:active {
+  font-size: 1.5rem;
+  background-color: #f0e6a3;
+}
+
+
+.bg-otherPages{
+  background-image: url('./assets/img/all-pages-banner.gif');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+/*---Responsive----*/
+
+
+@media (max-width: 762px) {
+ 
+  .btn-banner{
+    background-color: #B8671F;
+    border: 1px solid #B8671F;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .btn-banner{
+    background-color: #B8671F;
+    border: 1px solid #B8671F;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .inputSearch, .inputSearch:hover, .inputSearch:focus, .inputSearch:active {
+    font-size: 1rem;
+  }
+  .searchButton{
+    font-size: 1rem;
+  }
+
+  .btn-banner{
+    background-color: #B8671F;
+    border: 1px solid #B8671F;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 150px;
+  }
+}
+
