@@ -102,38 +102,3 @@ const DetailsCard = ({
 
 export default DetailsCard;
 
-// <div className="container bootdey">
-//       <div className="panel-body mt-5">
-//         <div className="col-12 col-md-6">
-//           <div className="pro-img-details">
-//             <img src={imgSrc} alt="" />
-//           </div>
-//         </div>
-//         <div className="col-12 col-md-6 prod-info">
-//           <h4 className="pro-d-title">{name}</h4>
-//           <div className="product_meta">
-//             <p>
-//               <strong>Age: </strong> {age} years
-//             </p>
-//             <p>
-//               <strong>Weight:</strong> {Math.round(weight)} lb
-//             </p>
-//             <p>
-//               <strong>Height:</strong> {Math.round(height)} cm
-//             </p>
-//             <p>
-//               <strong>Hair Color:</strong> {hairColor}
-//             </p>
-//             <div className="d-flex flex-wrap ">
-//               <strong>Professions:</strong>
-//               <ul className="d-flex pl-1">
-//                 {professions.map((profession) => (
-//                   <li> {profession},  </li>
-//                 ))}
-//               </ul>
-//             </div>
-
-//           </div>
-//         </div>
-//       </div>
-// </div>
