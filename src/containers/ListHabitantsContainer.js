@@ -2,9 +2,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import _ from 'lodash';
 import SearchBar from "../components/SearchBar/SearchBar";
 import { listHabitants } from "../redux/habitants/habitants-actions";
 import HabitantCard from "../components/HabitantCard";
+import Filters from "../components/Filters"
+
 
 import { TablePagination } from "@material-ui/core";
 
@@ -13,7 +16,7 @@ const ListHabitantsContainer = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [limit, setLimit] = useState(12);
+  const [limit, setLimit] = useState(6);
   const [page, setPage] = useState(0);
   const [habitants, setHabitants] = useState(habitantsState.habitantsList);
   const [sortOrder, setSortOrder] = useState("");
@@ -36,12 +39,25 @@ const ListHabitantsContainer = () => {
       filtered = habitantsState.habitantsList.filter((habitant) =>
         habitant.name.toLowerCase().includes(term.toLowerCase())
       );
-      console.log(filtered);
     }
 
     setHabitants(filtered);
     setSortOrder("");
   };
+
+  function handleSort(sortOrder) {
+    setSortOrder(sortOrder);
+    if (sortOrder.value) {
+      if(habitants){
+
+        setHabitants(_.orderBy(habitants, ['age'], [sortOrder.value]));
+      }
+      else{
+        setHabitants(_.orderBy(habitantsState.habitantsList, ['age'], [sortOrder.value]));
+      }
+    }
+  }
+
 
   const handleClickCallback = (id) => {
     console.log(id);
@@ -56,6 +72,7 @@ const ListHabitantsContainer = () => {
   ) : habitantsState.habitantsList ? (
     <div className="bg-pages">
       <SearchBar handleSubmitCallback={handleSubmitCallback} />
+      <Filters handleSort={handleSort} sortOrder={sortOrder}/>
       <Container>
         <Row className="d-flex align-items-stretch">
           {habitants
