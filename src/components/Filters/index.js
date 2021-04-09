@@ -4,14 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Filters = ({ handleSort, sortOrder }) => {
   const options = [
-    { value: "", label: "None" },
     { value: "asc", label: "Ascending" },
     { value: "desc", label: "Descending" },
   ];
 
   return (
     <Container className="sortBy">
-      <Row>
+      <Row className="filter-block-width ml-auto">
         <Col>
           <Select
             placeholder="Sort by age"
