@@ -1,6 +1,6 @@
 import HabitantsTypes from "./habitants-types";
-import axios from "axios";
-import { BASE_URL } from "../../utils/endpoint";
+import {fetchAll} from "../../utils/fetchAll"
+import {getHabitantById} from "../../utils/fetchById"
 
 //=======================================================
 //===== Fetching list of habitants
@@ -17,12 +17,12 @@ export const listHabitantsError = (message) => ({
 export const listHabitants = () => async (dispatch) => {
   dispatch(listHabitantsRequest());
   try {
-    const allHabitants = await axios.get(BASE_URL);
+    const allHabitants = await fetchAll();
 
     if (allHabitants) {
       dispatch({
         type: HabitantsTypes.LIST_HABITANTS_SUCCESS,
-        payload: allHabitants.data.Brastlewark,
+        payload: allHabitants,
       });
     }
   } catch (error) {
@@ -46,7 +46,6 @@ export const habitantDetails = (id) => async (dispatch) => {
   dispatch(habitantDetailsRequest());
   try {
     const habitant = await getHabitantById(id);
-    console.log(habitant)
     if (habitant) {
       dispatch({
         type: HabitantsTypes.DETAIL_HABITANT_SUCCESS,
@@ -60,49 +59,4 @@ export const habitantDetails = (id) => async (dispatch) => {
   }
 };
 
-async function getHabitantById(id) {
-  try {
-    const allHabitants = await axios.get(BASE_URL);
 
-    if (allHabitants) {
-      const habitantById = allHabitants.data.Brastlewark.filter(
-        (habitant) => habitant.id === parseInt(id)
-      );
-
-      return habitantById;
-    }
-    // const property = await responseOfOwnServer.json();
-    // if (property.data) {
-    //   return property.data;
-    // } else {
-    //   throw new Error(
-    //     "Request fetching property by Id not ok. Not data object."
-    //   );
-    // }
-  } catch (error) {
-    throw new Error(error.message);
-  }
-}
-
-// //* Obtain all habitants to filter later
-// export const listHabitants = (term) => async (dispatch) => {
-
-//   dispatch(listHabitantsRequest());
-//   try {
-
-//     const allHabitants = await axios.get(BASE_URL);
-
-//     if(allHabitants){
-//       const searchByNameResult = allHabitants.data.Brastlewark.filter((habitant) => habitant.name.includes(term))
-
-//       dispatch({
-//         type: HabitantsTypes.LIST_HABITANTS_SUCCESS,
-//         payload: searchByNameResult,
-//       });
-
-//     }
-
-//   } catch (error) {
-//     dispatch(listHabitantsError(error.message));
-//   }
-// };

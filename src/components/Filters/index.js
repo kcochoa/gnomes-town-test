@@ -16,7 +16,7 @@ const Filters = ({ handleSort, sortOrder }) => {
           <Select
             placeholder="Sort by age"
             value={sortOrder}
-            className="select-filter"
+            className="my-cool-select-top"
             onChange={handleSort}
             options={options}
           />

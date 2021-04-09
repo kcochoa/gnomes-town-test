@@ -10,9 +10,9 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
 
-const SearchArea = ({handleSubmitCallback}) => {
+const SearchArea = ({ handleSubmitCallback }) => {
   const [searchCriteria, setSearchCriteria] = useState("name");
   const [term, setTerm] = useState("");
 
@@ -21,18 +21,18 @@ const SearchArea = ({handleSubmitCallback}) => {
   };
 
   const handleSubmit = () => {
-    handleSubmitCallback(term)
+    handleSubmitCallback(term, searchCriteria);
   };
 
   return (
     <Container>
-      <Row className="align-button mt-4">
+      <Row className="align-button mt-5">
         <Col>
-          <InputGroup className="mb-3">
-            {/* <DropdownButton
+          <InputGroup className="seach-block-width mb-3 ml-auto">
+            <DropdownButton
               title={
                 <span>
-                  <FontAwesomeIcon icon={faEllipsisV} size="lg" />
+                  <FontAwesomeIcon icon={faFilter} size="lg" />
                 </span>
               }
               id="dropdown-menu-align-right"
@@ -40,28 +40,30 @@ const SearchArea = ({handleSubmitCallback}) => {
             >
               <Dropdown.Item eventKey="name">Name</Dropdown.Item>
               <Dropdown.Item eventKey="age">Age</Dropdown.Item>
-              <Dropdown.Item eventKey="job">Job</Dropdown.Item>
-              <Dropdown.Item eventKey="hair color">Hair Color</Dropdown.Item>
-            </DropdownButton> */}
+              <Dropdown.Item eventKey="hair_color">Hair Color</Dropdown.Item>
+            </DropdownButton>
             <FormControl
-              placeholder={"Search by name"}
-              aria-label={"Search by name"}
+              placeholder={"Search by " + searchCriteria}
+              aria-label={"Search by " + searchCriteria}
               aria-describedby="basic-addon2"
               value={term}
-              onChange={e => setTerm(e.target.value)}
+              onChange={(e) => setTerm(e.target.value)}
               className="inputSearch"
-
             />
             <InputGroup.Append>
-              <Button className="searchButton" onClick={handleSubmit} variant="outline-secondary">SEARCH</Button>
+              <Button
+                className="searchButton"
+                onClick={handleSubmit}
+                variant="outline-secondary"
+              >
+                SEARCH
+              </Button>
             </InputGroup.Append>
           </InputGroup>
         </Col>
       </Row>
-
     </Container>
   );
 };
 
 export default SearchArea;
-

@@ -6,7 +6,7 @@ export const HabitantsInitialState = {
   success: null,
   lastRequesErrorMessage: null,
   habitantDetails: null,
-  habitantsList: null,
+  habitantsList: [],
   loading: false,
 };
 

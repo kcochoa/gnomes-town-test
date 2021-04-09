@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { habitantDetails } from "../redux/habitants/habitants-actions";
-import DetailsCard from "../components/DetailsCard";
+import { habitantDetails } from "../../redux/habitants/habitants-actions";
+import DetailsCard from "../../components/DetailsCard";
 
 const DetailsHabitantContainer = () => {
   let { id } = useParams();

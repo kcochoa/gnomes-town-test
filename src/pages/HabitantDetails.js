@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailsHabitantContainer from "../containers/DetailsHabitantContainer"
+import DetailsHabitantContainer from "../containers/DetailsHabitantContainer/DetailsHabitantContainer"
 
 const GnomeDetails = () => {
     return ( <DetailsHabitantContainer/> );

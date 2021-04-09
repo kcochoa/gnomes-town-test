@@ -40,14 +40,18 @@
   background-color: #B8671F;
   border: 1px solid #B8671F;
   color: #ffffff;
-  font-size: 1.5rem;
   font-weight: bold;
  
 }
 
+.seach-block-width{
+  width: 25rem;
+}
+
 .inputSearch, .inputSearch:hover, .inputSearch:focus, .inputSearch:active {
-  font-size: 1.5rem;
-  background-color: #f0e6a3;
+  font-size: 1rem;
+  color:#B8671F;
+  // width: 20rem;
 }
 
 
@@ -57,6 +61,15 @@
   background-position: center;
   background-size: cover;
 }
+
+
+/*Filter*/
+
+.my-cool-select-top .Select-menu-outer {
+  top: auto;
+  bottom: 100%;
+}
+
 
 
 
@@ -103,6 +116,10 @@
     font-size: 1rem;
     font-weight: bold;
     margin-top: 150px;
+  }
+
+  .seach-block-width{
+    width: auto;
   }
 }
 
