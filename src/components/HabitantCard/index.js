@@ -53,12 +53,12 @@ const HabitantCard = ({ id, name, age, weight, height, hairColor, handleClickCal
         </div>
 
         <div className="one-third">
-          <div className="stat">{Math.round(height)} cm</div>
+          <div className="stat">{Math.round(height)}</div>
           <div className="stat-value">Height</div>
         </div>
 
         <div className="one-third no-border">
-          <div className="stat">{Math.round(weight)} lb</div>
+          <div className="stat">{Math.round(weight)}</div>
           <div className="stat-value">Weight</div>
         </div>
       </div>

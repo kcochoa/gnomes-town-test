@@ -27,7 +27,7 @@ const SearchArea = ({ handleSubmitCallback }) => {
   return (
     <Container>
       <Row className="align-button">
-        <Col>
+        <Col className="pr-0">
           <InputGroup className="seach-block-width mb-3 ml-auto">
             <DropdownButton
               title={

@@ -92,9 +92,15 @@ const ListHabitantsContainer = () => {
   ) : habitantsState.error ? (
     <h2>{habitantsState.lastRequesErrorMessage}</h2>
   ) : habitants ? (
-    <div className="bg-pages">
-      <Container className="d-flex flex-sm-wrap align-items-center">
-        <img src={imgLogo} alt="LOGO" height="200"/>
+    <div className="bg-pages-list">
+      <Container>
+        <Row>
+          <Col>
+          <h1 className="p-4 pt-5 logo">Brastlewark</h1>
+          </Col>
+        </Row>
+        
+        {/* <img src={imgLogo} alt="LOGO" height="150"/> */}
         <SearchBar handleSubmitCallback={handleSubmitCallback} />
       </Container>
       <Filters handleSort={handleSort} sortOrder={sortOrder} />

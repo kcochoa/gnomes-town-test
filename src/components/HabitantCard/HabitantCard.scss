@@ -22,6 +22,10 @@ $wizard: #4FACFF;
   box-shadow: -1px 15px 30px -12px black;
 }
 
+.clash-card:hover{
+  transform: translateY(-10px);
+}
+
 .clash-card__image {
   position: relative;
   height: 230px;

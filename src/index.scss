@@ -10,6 +10,13 @@
 
 /*HOMEPAGE STYLES*/
 
+.logo{
+  color: #B8671F;
+  font-family: $logo-font;
+  font-weight: bold;
+
+}
+
 .bg-banner{
   background-image: url('./assets/img/homepage-mobile.png');
   height: 100vh;
@@ -35,6 +42,10 @@
 }
 
 /*LIST HABITANTS PAGE*/
+
+.bg-pages-list{
+  background: #eee5b9;
+}
 
 .searchButton{
   background-color: #B8671F;
