@@ -7,6 +7,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { listHabitants } from "../../redux/habitants/habitants-actions";
 import HabitantCard from "../../components/HabitantCard";
 import Filters from "../../components/Filters";
+import imgLogo from "../../assets/img/logo.png";
 
 import { TablePagination } from "@material-ui/core";
 
@@ -48,13 +49,13 @@ const ListHabitantsContainer = () => {
           );
           break;
         case "age":
-          filtered = habitantsState.habitantsList.filter(
-            (habitant) => habitant.age.toString().includes(term)
+          filtered = habitantsState.habitantsList.filter((habitant) =>
+            habitant.age.toString().includes(term)
           );
           break;
-          case "hair_color":
-          filtered = habitantsState.habitantsList.filter(
-            (habitant) => habitant.hair_color.toLowerCase().includes(term.toLowerCase())
+        case "hair_color":
+          filtered = habitantsState.habitantsList.filter((habitant) =>
+            habitant.hair_color.toLowerCase().includes(term.toLowerCase())
           );
           break;
         default:
@@ -92,7 +93,10 @@ const ListHabitantsContainer = () => {
     <h2>{habitantsState.lastRequesErrorMessage}</h2>
   ) : habitants ? (
     <div className="bg-pages">
-      <SearchBar handleSubmitCallback={handleSubmitCallback} />
+      <Container className="d-flex flex-sm-wrap align-items-center">
+        <img src={imgLogo} alt="LOGO" height="200"/>
+        <SearchBar handleSubmitCallback={handleSubmitCallback} />
+      </Container>
       <Filters handleSort={handleSort} sortOrder={sortOrder} />
       <Container>
         <Row className="align-items-stretch mt-5 d-flex d-xs-block  mx-auto">
