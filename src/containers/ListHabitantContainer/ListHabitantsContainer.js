@@ -97,6 +97,7 @@ const ListHabitantsContainer = () => {
         <Row>
           <Col>
           <h1 className="p-4 pt-5 logo">Brastlewark</h1>
+          <h4 className="pl-4 pt-0 logo"><strong>Population:</strong>{habitantsState.habitantsList.length}</h4>
           </Col>
         </Row>
         
