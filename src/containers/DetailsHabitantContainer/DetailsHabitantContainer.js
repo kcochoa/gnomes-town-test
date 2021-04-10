@@ -21,6 +21,8 @@ const DetailsHabitantContainer = () => {
   ) : habitantsState.habitantDetails ? (
     <div className="bg-pages">
       <DetailsCard
+        key={habitantsState.habitantDetails[0].id}
+        id={habitantsState.habitantDetails[0].id}
         name={habitantsState.habitantDetails[0].name}
         age={habitantsState.habitantDetails[0].age}
         hairColor={habitantsState.habitantDetails[0].hair_color}

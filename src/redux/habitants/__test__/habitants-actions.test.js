@@ -13,7 +13,7 @@ const habitantsData = {
 };
 
 
-describe("recipes thunk actions tests", () => {
+describe("habitants thunk actions tests", () => {
   const mockStore = configureStore([thunk]);
 
   test("fetches all habitants from the api and dispatches the result", async () => {

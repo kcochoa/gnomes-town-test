@@ -52,6 +52,7 @@ const SearchArea = ({ handleSubmitCallback }) => {
             />
             <InputGroup.Append>
               <Button
+               data-testid="search"
                 className="searchButton"
                 onClick={handleSubmit}
                 variant="outline-secondary"

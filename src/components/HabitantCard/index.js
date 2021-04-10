@@ -36,7 +36,7 @@ const HabitantCard = ({ id, name, age, weight, height, hairColor, handleClickCal
     handleClickCallback(id);
   }
   return (
-    <div className="clash-card barbarian h-100" onClick={handleClick}>
+    <div data-testid={`habitant-card-${id}`}  className="clash-card barbarian h-100" onClick={handleClick}>
       <div className="clash-card__image clash-card__image--barbarian">
         <img
           src={imgSrc}

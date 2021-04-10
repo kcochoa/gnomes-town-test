@@ -101,9 +101,8 @@ const ListHabitantsContainer = () => {
       <Container>
         <Row className="align-items-stretch mt-5 d-flex d-xs-block  mx-auto">
           {habitants.slice(page * limit, page * limit + limit).map((hab) => (
-            <Col xs={12} sm={6} lg={4} className="mt-5">
+            <Col  key={hab.id.toString()} xs={12} sm={6} lg={4} className="mt-5">
               <HabitantCard
-                key={hab.id}
                 id={hab.id}
                 name={hab.name}
                 age={hab.age}
