@@ -7,7 +7,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { listHabitants } from "../../redux/habitants/habitants-actions";
 import HabitantCard from "../../components/HabitantCard";
 import Filters from "../../components/Filters";
-import imgLogo from "../../assets/img/logo.png";
+import { Ring } from "react-awesome-spinners";
 
 import { TablePagination } from "@material-ui/core";
 
@@ -88,7 +88,7 @@ const ListHabitantsContainer = () => {
   };
 
   return habitantsState.loading ? (
-    <h2>Loading...</h2>
+    <Ring style={{size: 64, color: '#B8671F'}} />
   ) : habitantsState.error ? (
     <h2>{habitantsState.lastRequesErrorMessage}</h2>
   ) : habitants ? (

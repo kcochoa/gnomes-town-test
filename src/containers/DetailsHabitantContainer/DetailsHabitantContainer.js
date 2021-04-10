@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { habitantDetails } from "../../redux/habitants/habitants-actions";
 import DetailsCard from "../../components/DetailsCard";
+import { Ring } from "react-awesome-spinners";
 
 const DetailsHabitantContainer = () => {
   let { id } = useParams();
@@ -15,7 +16,7 @@ const DetailsHabitantContainer = () => {
   }, [dispatch, id]);
 
   return habitantsState.loading ? (
-    <h2>Loading...</h2>
+    <Ring style={{size: 64, color: '#B8671F'}} />
   ) : habitantsState.error ? (
     <h2>{habitantsState.lastRequesErrorMessage}</h2>
   ) : habitantsState.habitantDetails ? (
