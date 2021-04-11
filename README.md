@@ -2,7 +2,7 @@
 
 App to know Brastlewark local population.
 
-![logo](F:\KATIA DIPUTACION\gnome-town-axa-test\src\assets\img\logo.png)
+![logo](https://github.com/kcochoa/gnomes-town-test/blob/master/src/assets/img/logo.png)
 
 
 
